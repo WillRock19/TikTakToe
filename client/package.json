@@ -1,0 +1,15 @@
+{
+  "name": "tik-tak-toe",
+  "version": "1.0.0",
+  "description": "Tik Tak Toe react application to test different concepts of a react app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tiktaktoe",
+    "react"
+  ],
+  "author": "WillRock19",
+  "license": "ISC"
+}
