@@ -2,9 +2,11 @@
   "name": "tik-tak-toe",
   "version": "1.0.0",
   "description": "Tik Tak Toe react application to test different concepts of a react app",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server .",
+    "build": "webpack ."
   },
   "keywords": [
     "tiktaktoe",
