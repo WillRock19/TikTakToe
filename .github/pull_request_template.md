@@ -5,7 +5,7 @@
 <Add a list of changes this PR will cause>
 
 ## 😫 Caveats
-<Add Any caveats this could introduce (possible side-effects, etc.) >
+<Add any caveats this could introduce (possible errors or unexpected side-effects, etc.) >
   
 ## ℹ️ Learn More
-<Any any relevant link or information that helps to understand the reasoning behind this PR's necessity>
+<Any relevant link or information that helps to understand the reasoning behind this PR's necessity>
