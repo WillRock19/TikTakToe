@@ -7,8 +7,7 @@ module.exports = {
 	testEnvironment: 'jsdom',
 	setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 	transform: {
-		'^.+\\.js[x]?$': 'babel-jest',
-		'^.+\\.ts[x]?$': 'ts-jest'
+		'^.+\\.js[x]?$': 'babel-jest'
 	},
 	moduleDirectories: ['node_modules', '<rootdir>/src']
 };
