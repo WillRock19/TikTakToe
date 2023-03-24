@@ -1,5 +1,14 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 module.exports = {
+	collectCoverage: true,
+	collectCoverageFrom: ['src/**/*.{ts,tsx}'],
+	coverageDirectory: 'coverage',
 	preset: 'ts-jest',
-	testEnvironment: 'node'
+	testEnvironment: 'jsdom',
+	setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+	transform: {
+		'^.+\\.js[x]?$': 'babel-jest',
+		'^.+\\.ts[x]?$': 'ts-jest'
+	},
+	moduleDirectories: ['node_modules', '<rootdir>/src']
 };
