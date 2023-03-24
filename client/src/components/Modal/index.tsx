@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import colors from '../../assets/styles/colors';
+import rgbaEffects from '../../assets/styles/rgba-effects';
 
 export const BackgroundDrop = styled.div`
-	background-color: rgb(0, 0, 0, 0.75);
+	background-color: ${rgbaEffects.translucidBackground};
 	width: 100vw;
 	height: 100vh;
 	position: absolute;
@@ -13,7 +14,7 @@ export const Article = styled.article`
 	display: flex;
 	background: ${colors.white};
 	border-radius: 1rem;
-	box-shadow: 0 5px 20px 0 ${colors.boxShadow};
+	box-shadow: 0 5px 20px 0 ${rgbaEffects.boxShadow};
 	color: ${colors.charcoal};
 	flex-direction: column;
 	justify-content: space-between;
@@ -53,7 +54,7 @@ export const CloseIconContainer = styled.span`
 	cursor: pointer;
 
 	&:hover {
-		box-shadow: 0 10px 20px -10px ${colors.boxShadow};
+		box-shadow: 0 10px 20px -10px ${rgbaEffects.boxShadow};
 		transform: translateY(5px);
 	}
 `;

@@ -2,12 +2,23 @@ import { useState } from 'react';
 import GlobalStyle from './GlobalStyles';
 import Button from './components/Button';
 import InformationModal from './components/Information-Modal';
+import { Dropdown } from './components/Dropdown/Dropdown';
+
+const options = [
+	{ value: 1, label: 'One' },
+	{ value: 10, label: 'Ten' },
+	{ value: 100, label: 'Hundred' }
+];
 
 const App = () => {
 	const [showModal, setShowModal] = useState(false);
 
 	const closeModal = () => {
 		setShowModal(false);
+	};
+
+	const dropdownChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+		console.log(event.target.value);
 	};
 
 	return (
@@ -22,6 +33,7 @@ const App = () => {
 			)}
 
 			<Button onClick={() => setShowModal(true)}>Teste</Button>
+			<Dropdown onChange={dropdownChange} options={options}></Dropdown>
 		</>
 	);
 };
