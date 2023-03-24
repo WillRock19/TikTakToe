@@ -1,23 +1,32 @@
-import React from 'react';
 import styled from 'styled-components';
-
-const Button = styled.button`
-	color: #353a47;
-	border-radius: 0.8rem;
-	background-color: #87bcde;
-	cursor: pointer;
-
-	&:active {
-		transform: scale(0.98);
-		box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-	}
-`;
+import colors from '../../assets/styles/colors';
 
 type Props = {
 	children: string;
+	minWidth?: string;
 	onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-export default ({ children, onClick }: Props) => {
-	return <Button onClick={onClick}>{children}</Button>;
+const Button = styled.button<Props>`
+	color: ${colors.charcoal};
+	cursor: pointer;
+	background-color: ${colors.lightBlue};
+	border-radius: 0.5rem;
+	font-size: 1rem;
+	padding: 10px;
+	min-width: ${(props) => props.minWidth ?? '5rem'};
+
+	&:active {
+		color: ${colors.white};
+		box-shadow: 3px 2px 22px 1px ${colors.boxShadow};
+		transform: scale(0.98);
+	}
+`;
+
+export default ({ children, onClick, minWidth }: Props) => {
+	return (
+		<Button onClick={onClick} min-width={minWidth}>
+			{children}
+		</Button>
+	);
 };
