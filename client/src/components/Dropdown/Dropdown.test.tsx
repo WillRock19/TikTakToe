@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import { Dropdown } from './Dropdown';
+import userEvent from '@testing-library/user-event';
 
 const defaultOptions = [
 	{ value: 1, label: 'First value' },

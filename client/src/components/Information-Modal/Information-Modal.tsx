@@ -18,7 +18,7 @@ type Props = {
 export const InformationModal = ({ children, title, onCloseFn }: Props) => {
 	return (
 		<>
-			<BackgroundDrop onClick={onCloseFn} />
+			<BackgroundDrop onClick={onCloseFn} data-testid="modal-backdrop" />
 			<Article>
 				<Header>
 					<span>{title}</span>
