@@ -6,7 +6,8 @@ export default createGlobalStyle`
         padding: 0;
         outline:0;
         box-sizing:border-box;
-        font-family: 'Open Sans', sans-serif; 
+        font-family: 'Open Sans', sans-serif;
+        font-size: 100%;
     }
     #root{
         margin:0 auto;
