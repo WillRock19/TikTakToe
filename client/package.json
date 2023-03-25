@@ -4,7 +4,7 @@
   "description": "Tik Tak Toe react application to test different concepts of a react app",
   "main": "src/index.tsx",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --passWithNoTests",
     "start": "webpack-dev-server .",
     "build": "webpack ."
   },

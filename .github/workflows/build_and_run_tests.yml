@@ -1,0 +1,41 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: CI
+
+on:
+  # Triggers the workflow on push or pull requests events (but only if they were made to the branch "main")
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build_and_test_client:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+
+    # Steps represent a sequence of tasks that will be executed as part of the job. 
+    # The actions/checkout@v3 is a standard action that must be included when the workflow requires a copy of the repository's code
+    steps:
+    - name: Checkout repository to GITHUB_WORKSPACE
+      uses: actions/checkout@v3
+      
+    # Since the cache uses by default a package-lock.json on the root, and ours isn't, we must set the cache-depedency-path (see more here: https://dev.to/imomaliev/til-fix-error-dependencies-lock-file-is-not-found-ade)
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        cache-dependency-path: './client/package-lock.json'
+        
+    - name: Run npm ci, build and test on client's directory
+      run: | 
+        npm ci
+        npm run build --if-present
+        npm test
+      working-directory: client
+
