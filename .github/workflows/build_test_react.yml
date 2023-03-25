@@ -24,11 +24,13 @@ jobs:
     - name: Checkout repository to GITHUB_WORKSPACE
       uses: actions/checkout@v3
       
+    # Since the cache uses by default a package-lock.json on the root, and ours isn't, we must set the cache-depedency-path (see more here: https://dev.to/imomaliev/til-fix-error-dependencies-lock-file-is-not-found-ade)
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        cache-dependency-path: './client/package-lock.json'
         
     - name: Run npm ci, build and test on client's directory
       run: | 
