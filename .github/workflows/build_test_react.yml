@@ -21,7 +21,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job. 
     # The actions/checkout@v3 is a standard action that must be included when the workflow requires a copy of the repository's code
     steps:
-    - name: Checkout repository to GITHUB_WORKSPACE
+    - name: Checkout repository to ${{ GITHUB_WORKSPACE }}
       uses: actions/checkout@v3
       
     - name: Use Node.js ${{ matrix.node-version }}
@@ -30,10 +30,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         
-    - name: Run npm ci, build and test on client's folder
+    - name: Run npm ci, build and test on client's directory
       run: | 
         npm ci
         npm run build --if-present
         npm test
-      working-directory: ./client/
+      working-directory: client
 
