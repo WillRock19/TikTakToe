@@ -21,19 +21,19 @@ The client is basically a web Tic Tac Toe game, and uses the following technolog
 
 - [Babel](https://babeljs.io/docs/): As a toolchain to transform the transpiled JS files into old JS syntax;
 - [Typescript](https://www.typescriptlang.org/): As the main programming language (it is [transpiled](https://dev.to/kealanparr/compiling-vs-transpiling-3h9i) to JS);
-- [React](https://react.dev/): The library we use to create the front-end;
-- [Webpack](https://webpack.js.org/concepts/): To bundle the JS files and serve then to the browser;
+- [React](https://react.dev/): As the library to create the front-end;
+- [Webpack](https://webpack.js.org/concepts/): To bundle the JS files and serve then in the browser;
 
 It has automatc tests, which uses the following technologies:
 
-- [Jest](https://jestjs.io/pt-BR/): To have all functions/structure to make our tests;
-- [React testing library](https://testing-library.com/docs/react-testing-library/intro/): To test our React Components;
-- [User Event testing library](https://testing-library.com/docs/ecosystem-user-event/): To write React Component test simulating the user's behaviour
+- [Jest](https://jestjs.io/pt-BR/): Tools to write different types of tests;
+- [React testing library](https://testing-library.com/docs/react-testing-library/intro/): Specific tools to test react components;
+- [User Event testing library](https://testing-library.com/docs/ecosystem-user-event/): Specific tools to simulate the user's behaviour during component tests;
 
 And also has a linter and style-guide defined with:
 
-- [Eslint](https://eslint.org/docs/latest/use/getting-started): To define the code patterns we must follow during development;
-- [Prettier](https://prettier.io/): To format our code and apply the rules our project demands;
+- [Eslint](https://eslint.org/docs/latest/use/getting-started): To define the code style we must follow;
+- [Prettier](https://prettier.io/): To format our code with a set of desired styles;
 
 **OBS**: The client's app will eventually have support for login.
 
