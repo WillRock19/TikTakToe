@@ -6,7 +6,7 @@ This is a Tic Tac Toe web game. This project was created as a way to train diffe
 
 To learn more about the Tic Tac Toe game, [click here](https://en.wikipedia.org/wiki/Tic-tac-toe).
 
-**IMPORTANT**: This project still on development, and we still want to add a lot of different cool stuff (like a `server`).
+> :warning: **IMPORTANT**: This project still on development, and we still want to add a lot of different cool stuff (like a `server`).
 
 ## Project Structure
 
